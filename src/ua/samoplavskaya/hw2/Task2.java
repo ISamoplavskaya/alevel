@@ -1,4 +1,6 @@
-public class HW2Task2 {
+package ua.samoplavskaya.hw2;
+
+public class Task2 {
     public static void main(String[] args) {
         int num=15;
         System.out.println("Number " + num + checkEven(num));

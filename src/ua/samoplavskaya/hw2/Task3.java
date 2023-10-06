@@ -1,4 +1,6 @@
-public class HW2Task3 {
+package ua.samoplavskaya.hw2;
+
+public class Task3 {
     public static void main(String[] args) {
         double a = 15;
         double b = -55;
@@ -10,8 +12,8 @@ public class HW2Task3 {
         double b1 = (b<0)? -b:b;
         double c1 = (c<0)? -c:c;
         if (a1<b1) {
-            if (a1<c1) return a;
-            else return c;
+           if (a1<c1) return a;
+           else return c;
         }
         else return b;
     }
