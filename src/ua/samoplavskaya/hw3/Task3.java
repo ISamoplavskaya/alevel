@@ -19,7 +19,7 @@ public class Task3 {
         int min = scanner.nextInt();
         System.out.println("to (enter a number): ");
         int max = scanner.nextInt();
-        int a = (int) (min + Math.random() * max);
+        int a = (int) (min +(Math.random() * (max-min)));
        // System.out.println(a);
         game(a);
     }
