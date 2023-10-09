@@ -9,8 +9,18 @@ public class Task2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter string:");
-        String line = scanner.nextLine();
-        System.out.println("The number of words in a line is " + wordCounter(line));
+        String line = scanner.nextLine().trim();
+        //System.out.println(removeExtraSpaces(line));
+        String mewLine = removeExtraSpaces(line);
+        System.out.println("The number of words in a line is " + wordCounter(mewLine));
+    }
+
+    public static String removeExtraSpaces(String line) {
+        while (line.contains("  ")) {
+            String replace = line.replace("  ", " ");
+            line = replace;
+        }
+        return line;
     }
 
     public static int wordCounter(String line) {
