@@ -15,6 +15,7 @@ public class Task1 {
     public static void main(String[] args) {
         int[][] array = new int[4][3];
         fillArray(array);
+        printArray(array);
     }
 
     public static void fillArray(int[][] array) {
@@ -26,8 +27,13 @@ public class Task1 {
                 } else array[i][j] = -k;
                 k++;
             }
+        }
+    }
+    private static void printArray(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
             System.out.println(Arrays.toString(array[i]));
         }
     }
+
 }
 

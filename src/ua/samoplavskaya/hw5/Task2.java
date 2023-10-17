@@ -23,9 +23,7 @@ public class Task2 {
                 marker++;
             }
         }
-        if (marker == 0) {
-            return true;
-        } else return false;
+        return marker==0;
     }
 
 }

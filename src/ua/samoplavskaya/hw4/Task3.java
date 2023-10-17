@@ -7,26 +7,25 @@ import java.util.concurrent.ThreadLocalRandom;
 //• Все четные значения заменить на нули. Размер массива - 2000 элементов.
 public class Task3 {
     public static void main(String[] args) {
-        int[] numbers= new int[2000];
+        int[] numbers = new int[2000];
         fill(numbers);
         System.out.println(Arrays.toString(numbers));
-        int[] newNumbers = Arrays.copyOf(numbers,numbers.length) ;
-        replaceWith0(newNumbers);
-        System.out.println(Arrays.toString(newNumbers));
+        System.out.println(Arrays.toString(replaceEvenWithZero(numbers)));
     }
 
-    public static void fill(int[] array){
+    public static void fill(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            array[i]= ThreadLocalRandom.current().nextInt();
+            array[i] = ThreadLocalRandom.current().nextInt();
         }
     }
 
-    public static void replaceWith0(int[] array){
-        for (int i = 0; i < array.length; i++) {
-            if (array[i]%2==0){
-                array[i]=0;
+    public static int[] replaceEvenWithZero(int[] array) {
+        int[] newArray = Arrays.copyOf(array, array.length);
+        for (int i = 0; i < newArray.length; i++) {
+            if (newArray[i] % 2 == 0) {
+                newArray[i] = 0;
             }
-
         }
+        return newArray;
     }
 }
