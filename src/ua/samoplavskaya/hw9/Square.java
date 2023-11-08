@@ -1,8 +1,7 @@
 package ua.samoplavskaya.hw9;
 
 public class Square extends Figure {
-    private String nameFigure;
-    private double side;
+    private final double side;
 
     public Square(String nameFigure, double side) {
         super(nameFigure);
