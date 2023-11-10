@@ -14,5 +14,8 @@ public class Main {
         System.out.println("Array with added element:");
         arrayInt.print();
         System.out.println("Does the array contain the given element? "+arrayInt.isContains(10));
+        System.out.println("3d element of array: "+arrayInt.get(3));
+        arrayInt.remove(1);
+        arrayInt.print();
     }
 }

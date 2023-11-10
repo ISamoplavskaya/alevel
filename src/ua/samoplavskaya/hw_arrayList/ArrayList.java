@@ -32,8 +32,8 @@ public class ArrayList<T> {
                 } else array[i] = newArray[i - 1];
             }
         } else {
-            System.arraycopy(newArray,0, array, index+1, newArray.length);
-            array[index]=element;
+            System.arraycopy(newArray, 0, array, index + 1, newArray.length);
+            array[index] = element;
         }
     }
 
@@ -50,6 +50,23 @@ public class ArrayList<T> {
 
     boolean isContains(T element) {
         return indexOf(element) != -1;
+    }
+
+    T get(int index) {
+        return (T) array[index];
+    }
+
+
+    Object[] remove(int index) {
+        Object[] newArray = array;
+        array = new Object[newArray.length - 1];
+            for (int i = 0; i < newArray.length -1; i++) {
+                if (i < index) {
+                    array[i] = newArray[i];
+                } else array[i] = newArray[i +1];
+            }
+        return array;
+
     }
 
     void print() {
