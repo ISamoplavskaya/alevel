@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class ArrayList<T> {
     private Object[] array;
     private int size;
+    private int counter = 0;
 
     ArrayList(int size) {
         this.size = size;
@@ -13,9 +14,13 @@ public class ArrayList<T> {
 
     //Add element to the end of array {1,2,3} -> {1,2,3,4}
     void add(T element) {
-        Object[] newArray = array;
-        array = Arrays.copyOf(newArray, newArray.length + 1);
-        array[array.length - 1] = element;
+        if (counter < size) {
+            array[counter++] = element;
+        } else {
+            Object[] newArray = array;
+            array = Arrays.copyOf(newArray, newArray.length + 1);
+            array[counter++] = element;
+        }
     }
 
     //Add element to given position of array {1,2,3} -> {1,4,2,3}
@@ -40,6 +45,7 @@ public class ArrayList<T> {
         for (int i = 0; i < array.length; i++) {
             if (element == array[i]) {
                 index = i;
+                break;
             }
         }
         return index;
