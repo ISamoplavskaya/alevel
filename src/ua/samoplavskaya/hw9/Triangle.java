@@ -33,6 +33,16 @@ public class Triangle extends Figure {
     }
 
     @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer(getNameFigure());
+        sb.append('{');
+        sb.append("area=").append(area());
+        sb.append(", perimeter=").append(perimeter());
+        sb.append('}');
+        return sb.toString();
+    }
+
+    @Override
     public double perimeter() {
         if (sideA != 0 && sideB != 0 && sideC != 0) {
             return (sideA + sideB + sideC);
