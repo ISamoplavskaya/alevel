@@ -31,7 +31,7 @@ public class Main {
         System.out.println(figures);
 
         double difference = 10.0;
-        List<Figure> result1 = findFigure1(figures, difference);
+        List<Figure> result1 = findFigures(figures, difference);
 
         if (!result1.isEmpty()) {
             System.out.println("Figure whose area is greater than the minimum at " + difference + ": ");
@@ -40,7 +40,7 @@ public class Main {
             System.out.println("No figures found whose area is greater than the minimum at " + difference + ": ");
         }
 
-        List<Figure> result2 = findFigure2(figures);
+        List<Figure> result2 = findFigure(figures);
 
         if (!result2.isEmpty()) {
             System.out.println("\nFigures whose area is twice the perimeter ");
@@ -51,20 +51,20 @@ public class Main {
     }
 
 
-    public static List<Figure> findFigure1(List<Figure> figures, double difference) {
+    public static List<Figure> findFigures(List<Figure> figures, double difference) {
         return figures.stream()
-                .filter(figure -> figure.area() > findMinArea(figures) + difference)
+                .filter(figure -> figure.area() == findMinFigure(figures) + difference)
                 .collect(Collectors.toList());
     }
 
-    private static double findMinArea(List<Figure> figures) {
+    private static double findMinFigure(List<Figure> figures) {
         return figures.stream()
                 .mapToDouble(Figure::area)
                 .min()
                 .orElse(0.0);
     }
 
-    public static List<Figure> findFigure2(List<Figure> figures) {
+    public static List<Figure> findFigure(List<Figure> figures) {
         return figures.stream()
                 .filter(figure -> figure.area() == 2 * figure.perimeter())
                 .collect(Collectors.toList());
