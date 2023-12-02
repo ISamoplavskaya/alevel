@@ -1,0 +1,15 @@
+1.Filter products with quantities greater than 4:
+Eggs|10|0.2
+Cucumbers|5|0.8
+Apples|6|1.2
+2.The total amount of food in the refrigerator: 29
+3.Average price of products: 1,2
+4.Sorted products by price in descending order:
+Chicken|2|5.0
+Cheese|3|2.5
+Milk|2|1.5
+Apples|6|1.2
+Bread|1|1.0
+Cucumbers|5|0.8
+Eggs|10|0.2
+5.Total cost of products (price * quantity): 34.7
