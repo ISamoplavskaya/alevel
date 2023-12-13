@@ -8,7 +8,6 @@ public class Main {
         String query="insert into public.employee (first_name,last_name,contact_id) values (?,?,?)";
         addEmployee(connection, query,"Olga","Sokol",2);
         addEmployee(connection, query,"Vlad","Piontkovskyiy",4);
-
         printAllEmployee(connection);
         connection.close();
     }
