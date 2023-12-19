@@ -1,7 +1,7 @@
 package ua.samoplavskaya.hw6;
 //Ошибка в строке 22. ПРи запуске Debug выводит ошибку "java.lang.IndexOutOfBoundsException : Invalid array range: 1 to 1"
 // при значениях i=0, j=1. Искала ошибку в цикле For. Там и заметила, что вместо j<triangle[i].length стоит i.
-//
+
 import java.util.Arrays;
 
 public class Task2 {

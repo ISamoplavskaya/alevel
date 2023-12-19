@@ -4,7 +4,8 @@ package ua.samoplavskaya.lessons2810;
 public class Animal {
     private String kindOFood;
     private int hoursOfSleeping;
-    public void eat() {;
+
+        public void eat() {;
         System.out.println("Eat " + kindOFood);
     }
     public void sleep() {

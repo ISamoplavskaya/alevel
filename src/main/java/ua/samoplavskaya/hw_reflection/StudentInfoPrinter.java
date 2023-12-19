@@ -11,8 +11,7 @@ public class StudentInfoPrinter {
                 ShowInfo annotation = field.getAnnotation(ShowInfo.class);
                 if (annotation.show()) {
                     field.setAccessible(true);
-                    Object fieldValue = null;
-                    fieldValue = field.get(student);
+                    Object fieldValue = field.get(student);
                     System.out.println(field.getName() + " : " + fieldValue);
 
                 }
