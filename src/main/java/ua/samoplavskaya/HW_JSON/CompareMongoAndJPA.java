@@ -10,13 +10,13 @@ import org.bson.Document;
 import org.bson.types.ObjectId;
 
 
-public class CompareMongoAndLDBC {
+public class CompareMongoAndJPA {
     public static void main(String[] args) {
-        //crudJDBC();
+        crudJPA();
         crudMongo();
     }
 
-    private static void crudJDBC() {
+    private static void crudJPA() {
         try (EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("MyUnit")) {
             EntityManager entityManager = entityManagerFactory.createEntityManager();
             entityManager.getTransaction().begin();
