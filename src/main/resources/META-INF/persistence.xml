@@ -7,7 +7,11 @@
 
     <persistence-unit name="MyUnit" transaction-type="RESOURCE_LOCAL">
 
+        <class>ua.samoplavskaya.lesson_hibernate.Person</class>
+
+
         <class>ua.samoplavskaya.HW_JSON.Person</class>
+
         <class>ua.samoplavskaya.HW_hibernate.User</class>
         <class>ua.samoplavskaya.HW_hibernate.Order</class>
 
@@ -17,7 +21,11 @@
             <property name="javax.persistence.jdbc.user" value="postgres"/>
             <property name="javax.persistence.jdbc.password" value="postgres"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+
+<!--            <property name="hibernate.hbm2ddl.auto" value="update"/>-->
+
 <!--                        <property name="hibernate.hbm2ddl.auto" value="create"/>-->
+
             <property name="hibernate.show_sql" value="true"/>
         </properties>
 
