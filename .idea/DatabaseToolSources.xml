@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DatabaseToolSources">
+    <data-source name="localhost" uuid="a2d7557e-e249-4c8a-80e4-3e30ffc8727a" type="MONGO">
+      <base-info connect-type="DB_DEFAULT" product="Mongo DB" version="7.0.4" jdbc-name="MongoDB JDBC Driver" jdbc-version="1.18" />
+      <user-name>admin</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="admin" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+      <url>mongodb://admin:admin123@localhost:27017</url>
+      <remarks />
+      <vm-options />
+      <driver-info id="mongoDB" />
+      <ssh-properties enabled="false" />
+      <ssl-config enabled="false">
+        <uuid />
+        <caFile />
+        <clientCertificateFile />
+        <clientKeyFile />
+        <sslMode>REQUIRE</sslMode>
+      </ssl-config>
+    </data-source>
+  </component>
+</project>
