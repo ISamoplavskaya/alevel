@@ -32,12 +32,7 @@ public class JDBCDao implements Dao<Person> {
             preparedStatement.setLong(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
-                Person person = new Person(
-                        resultSet.getLong("id"),
-                        resultSet.getString("first_name"),
-                        resultSet.getString("last_name"),
-                        resultSet.getString("email")
-                );
+                Person person = getPerson(resultSet);
                 return Optional.of(person);
             }
             return Optional.empty();
@@ -53,18 +48,22 @@ public class JDBCDao implements Dao<Person> {
             PreparedStatement statement = connection.prepareStatement(FIND_ALL);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                Person person = new Person(
-                        resultSet.getLong("id"),
-                        resultSet.getString("first_name"),
-                        resultSet.getString("last_name"),
-                        resultSet.getString("email")
-                );
+                Person person = getPerson(resultSet);
                 persons.add(person);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         return persons;
+    }
+    private static Person getPerson(ResultSet resultSet) throws SQLException {
+        Person person = new Person(
+                resultSet.getLong("id"),
+                resultSet.getString("first_name"),
+                resultSet.getString("last_name"),
+                resultSet.getString("email")
+        );
+        return person;
     }
 
     @Override
