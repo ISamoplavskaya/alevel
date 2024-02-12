@@ -1,0 +1,46 @@
+1.Full name of any employee whose firstName starts with ‘A’:
+Alex Show
+Alex Smith
+
+2.Sort employees based on firstName, for same firstName sort by salary:
+name : "Alex"
+secondName : "Show"
+salary : 3600
+age : 30
+
+name : "Alex"
+secondName : "Smith"
+salary : 3700
+age : 30
+
+name : "Brad"
+secondName : "Pitt"
+salary : 3600
+age : 31
+
+name : "Dan"
+secondName : "Brown"
+salary : 3800
+age : 34
+
+name : "Emily"
+secondName : "Blunt"
+salary : 3900
+age : 34
+
+
+3.Print list of all employee with min salary:
+name : "Alex"
+secondName : "Show"
+salary : 3600
+age : 30
+
+name : "Brad"
+secondName : "Pitt"
+salary : 3600
+age : 31
+
+
+4.Total salary: 18600
+
+5.The difference in salary between the youngest and the oldest employee: 200
